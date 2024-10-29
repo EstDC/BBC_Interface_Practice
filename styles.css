@@ -63,7 +63,10 @@ img {
   margin-right: 10px;
 }
 
-.menu-button img,
+.menu-button img{
+  width: 50%;
+  height: 50%;
+}
 .search-button img {
   width: 70%;
   height: 70%;
