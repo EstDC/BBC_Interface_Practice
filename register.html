@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="top-bar">
+        <div class="top-bar-container">
+          <div class="left-buttons">
+            <button class="menu-button" id="open-menu"><img class="search-icon" src="8666802_menu_navigation_icon.png"></button>
+            <button class="search-button" id="open-search">
+              <img class="search-icon" src="icons8-search-50.png">
+            </button>
+          </div>
+          <div class="logo">
+            <a href="index.html">
+              <div class="logo-css">
+                <span class="logo-letter">B</span>
+                <span class="logo-letter">B</span>
+                <span class="logo-letter">C</span>
+              </div>
+            </a>
+          </div>
+          <div class="auth-buttons">
+            <button class="auth-button sign-in-button">Sign In</button>
+          </div>
+        </div>
+      </header>
+      <nav class="side-menu" id="side-menu">
+        <button class="close-menu" id="close-menu">✖</button>
+        <ul class="menu-list">
+          <li class="menu-item home-item">
+            <a href="index.html">Inicio</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Noticias</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="menu-overlay" id="menu-overlay"></div>
+      <dialog id="search-dialog">
+        <button class="close-btn">✖</button>
+        <input type="search" id="site-search" name="q" placeholder="Buscar...">
+        <ul id="search-results">
+        </ul>
+      </dialog>
+      <main>
+        <section class="main-section">
+          <form class="register-form">
+            <label for="username">Nombre de usuario: </label>
+            <input type="text" id="username">
+            <label for="username">Contraseña: </label>
+            <input type="text" id="password">
+          </form>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <div class="logo-css footer-logo-css">
+              <span class="logo-letter">B</span>
+              <span class="logo-letter">B</span>
+              <span class="logo-letter">C</span>
+            </div>
+          </div>
+          <nav class="footer-nav">
+            <ul class="footer-links">
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">About the BBC</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Accessibility Help</a></li>
+              <li><a href="#">Contact the BBC</a></li>
+            </ul>
+          </nav>
+          <div class="social-media">
+            <a href="#" class="social-icon"><img src="icons8-twitter-96.png" alt="Twitter"></a>
+            <a href="#" class="social-icon"><img src="icons8-facebook-96.png" alt="Facebook"></a>
+            <a href="#" class="social-icon"><img src="icons8-instagram-96.png" alt="Instagram"></a>
+            <a href="#" class="social-icon"><img src="icons8-youtube-96.png" alt="YouTube"></a>
+          </div>
+        </div>
+      </footer>
+      <script src="scripts.js"></script>
+</body>
+</html>

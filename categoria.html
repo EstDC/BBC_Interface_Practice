@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Categoría</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-bar-container">
+      <div class="left-buttons">
+        <button class="menu-button" id="open-menu" aria-label="Abrir menú">
+          <img class="search-icon" src="8666802_menu_navigation_icon.png" alt="Menú">
+        </button>
+        <custom-search>
+          <button class="search-button" aria-label="Buscar">
+            <img class="search-icon" src="icons8-search-50.png" alt="Buscar">
+          </button>
+          <dialog>
+            <button class="close-btn" aria-label="Cerrar búsqueda">✖</button>
+            <input type="search" id="site-search" name="q" placeholder="Buscar..." aria-label="Buscar">
+            <ul id="search-results">
+            </ul>
+          </dialog>
+        </custom-search>
+      </div>
+      <div class="logo">
+        <a href="index.html">
+          <div class="logo-css">
+            <span class="logo-letter">B</span>
+            <span class="logo-letter">B</span>
+            <span class="logo-letter">C</span>
+          </div>
+        </a>
+      </div>
+      <div class="auth-buttons">
+        <button class="auth-button register-button">Registrarse</button>
+        <button class="auth-button sign-in-button">Entrar</button>
+      </div>
+    </div>
+  </header>
+  <nav class="side-menu" id="side-menu">
+    <button class="close-menu" id="close-menu" aria-label="Cerrar menú">✖</button>
+    <ul class="menu-list">
+      <li class="menu-item home-item">
+        <a href="index.html">Inicio</a>
+      </li>
+      <li class="menu-item">
+        <a href="categoria.html?categoria=Mundo">Mundo</a>
+      </li>
+      <li class="menu-item">
+        <a href="categoria.html?categoria=Negocios">Negocios</a>
+      </li>
+      <li class="menu-item">
+        <a href="categoria.html?categoria=Ciencia">Ciencia</a>
+      </li>
+      <li class="menu-item">
+        <a href="categoria.html?categoria=Tecnología">Tecnología</a>
+      </li>
+      <li class="menu-item">
+        <a href="categoria.html?categoria=Automóvil">Automóvil</a>
+      </li>
+      <li class="menu-item">
+        <a href="categoria.html?categoria=Deportes">Deportes</a>
+      </li>
+      <li class="menu-item">
+        <a href="categoria.html?categoria=Cultura">Cultura</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="menu-overlay" id="menu-overlay"></div>
+  <nav class="main-nav">
+    <ul>
+      <li class="nav-item home-nav-item">
+        <a href="index.html">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a href="categoria.html?categoria=Mundo">Mundo</a>
+      </li>
+      <li class="nav-item">
+        <a href="categoria.html?categoria=Negocios">Negocios</a>
+      </li>
+      <li class="nav-item">
+        <a href="categoria.html?categoria=Ciencia">Ciencia</a>
+      </li>
+      <li class="nav-item">
+        <a href="categoria.html?categoria=Tecnología">Tecnología</a>
+      </li>
+      <li class="nav-item">
+        <a href="categoria.html?categoria=Automóvil">Automóvil</a>
+      </li>
+      <li class="nav-item">
+        <a href="categoria.html?categoria=Deportes">Deportes</a>
+      </li>
+      <li class="nav-item">
+        <a href="categoria.html?categoria=Cultura">Cultura</a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <section class="main-section">
+      <div class="section-header">
+        <hr class="section-title-line">
+        <div class="section-title">
+          <h2 id="categoria-titulo">Título de la Categoría</h2>
+          <span class="section-arrow">›</span>
+        </div>
+      </div>
+      <div class="articles-grid" id="articles-grid">
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="logo-css footer-logo-css">
+          <span class="logo-letter">B</span>
+          <span class="logo-letter">B</span>
+          <span class="logo-letter">C</span>
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <ul class="footer-links">
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">About the BBC</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">Accessibility Help</a></li>
+          <li><a href="#">Contact the BBC</a></li>
+        </ul>
+      </nav>
+      <div class="social-media">
+        <a href="#" class="social-icon"><img src="icons8-twitter-96.png" alt="Twitter"></a>
+        <a href="#" class="social-icon"><img src="icons8-facebook-96.png" alt="Facebook"></a>
+        <a href="#" class="social-icon"><img src="icons8-instagram-96.png" alt="Instagram"></a>
+        <a href="#" class="social-icon"><img src="icons8-youtube-96.png" alt="YouTube"></a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="scripts.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoria = urlParams.get('categoria');
+    if (categoria) {
+      renderCategoryArticles(categoria);
+    } else {
+      renderAllArticles();
+    }
+  </script>
+</body>
+</html>
