@@ -164,11 +164,11 @@ img {
   position: relative;
 }
 
-.menu-item:first-child {
+/*.menu-item:first-child {
   border-inline-start: 5px solid #000; 
   writing-mode: vertical-tb;
   font-weight: bolder;
-}
+}*/
 
 .menu-item a {
   display: block;
@@ -217,7 +217,7 @@ img {
   writing-mode: vertical-tb;
 }
 
-.home-nav-item::after {
+.home-nav-item::after{
   content: '';
   position: absolute;
   bottom: 0;

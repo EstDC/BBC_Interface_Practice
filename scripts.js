@@ -250,6 +250,17 @@ const renderCategoryArticles = (category) => {
 
   articlesGrid.innerHTML = ''; 
   categoriaTitulo.textContent = category; 
+  
+  const navLinks = document.querySelectorAll('.nav-item a');
+  navLinks.forEach(link => {
+    const hrefParams = new URLSearchParams(link.search);
+    const linkCategory = hrefParams.get('categoria');
+    if (category.toLowerCase() === linkCategory?.toLowerCase()) {
+      link.classList.add('home-nav-item');
+    } else {
+      link.classList.remove('home-nav-item');
+    }
+  });
 
   const filteredArticles = articles.filter(article => 
     article.category.toLowerCase() === category.toLowerCase()
