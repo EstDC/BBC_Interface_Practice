@@ -305,7 +305,7 @@ class RelativeTime extends HTMLElement {
   }
   render() {
     const timeValue = this.getAttribute('time')
-    const time = timeValue ? new Date(Number(timeValue)).getTime() : Date.now();
+    const time = timeValue ? new Date(timeValue).getTime() : Date.now();
     const now = Date.now();
 
     const diff = now - time;
